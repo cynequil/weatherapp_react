@@ -32,7 +32,7 @@ body {
   padding-top: 50px;
 }
 .current_location {
-  width: 80%;
+  width: 82%;
   margin-bottom: 10px;
   padding: 12px;
   background-color: #3e9dfc;
@@ -49,10 +49,10 @@ body {
   align-items: center;
 }
 #location_search {
-  width: 80%;
+  width: 82%;
   font-weight: bold;
   padding: 10px;
-  font-size: 15px;
+  font-size: 12px;
   margin-bottom: 10px;
   border-radius: 5px;
 }
