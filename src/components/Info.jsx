@@ -9,6 +9,7 @@ const Info = () => {
   const name = useSelector((state) => state.place_name);
   const data = useSelector((state) => state.data);
   const forecast = useSelector((state) => state.forecast);
+  const browserloc = useSelector((state) => state.browserloc);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -20,12 +21,12 @@ const Info = () => {
         .then((response) => response.json())
         .then((result) => {
           dispatch(changeForecast(result.data));
-          if (name === "") dispatch(changePlaceName(result.city_name));
+          if (browserloc === true) dispatch(changePlaceName(result.city_name));
           dispatch(forcastActive());
         })
         .catch((error) => console.log("error", error));
     }
-  }, [coordinates, dispatch, name]);
+  }, [coordinates, dispatch, browserloc]);
   return (
     <div className="box info">
       {data && <PlaceInfo name={name} coordinates={coordinates} />}

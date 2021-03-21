@@ -24,3 +24,10 @@ export const forcastActive = () => {
     type: "FORECAST_AVAILABLE",
   };
 };
+
+export const locationByBrowser = (payload) => {
+  return {
+    type: "LOCATION_BROWSER",
+    payload,
+  };
+};

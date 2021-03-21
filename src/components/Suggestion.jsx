@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { changeLatLong, changePlaceName } from "../actions";
+import { changeLatLong, changePlaceName, locationByBrowser } from "../actions";
 
 const Suggestion = ({ suggestion, i }) => {
   const dispatch = useDispatch();
@@ -20,6 +20,7 @@ const Suggestion = ({ suggestion, i }) => {
     console.log([lat, lon], name);
     dispatch(changeLatLong([lat, lon]));
     dispatch(changePlaceName(name));
+    dispatch(locationByBrowser(false));
   };
   return (
     <button

@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { changeLatLong } from "../actions";
+import { changeLatLong, locationByBrowser } from "../actions";
 
 const Currentlocation = () => {
   let dispatch = useDispatch();
@@ -11,6 +11,7 @@ const Currentlocation = () => {
       dispatch(
         changeLatLong([position.coords.latitude, position.coords.longitude])
       );
+      dispatch(locationByBrowser(true));
     });
   };
   return (
