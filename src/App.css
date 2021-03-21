@@ -1,38 +1,115 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: Arial, sans-serif;
+}
+body {
+  background-color: rgb(77, 76, 76);
+  color: white;
+}
+.container {
+  overflow: hidden;
+  margin: 80px auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+}
+.box {
+  height: 70vh;
+  width: 48%;
   text-align: center;
+  box-shadow: 12px 12px 8px rgb(110, 110, 110),
+    -10px -10px 8px rgb(109, 109, 109);
+  border-radius: 50px;
+  margin: 25px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.control {
+  padding-top: 50px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.current_location {
+  width: 80%;
+  margin-bottom: 10px;
+  padding: 12px;
+  background-color: #3e9dfc;
+  color: white;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.autocomplete {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+#location_search {
+  width: 80%;
+  font-weight: bold;
+  padding: 10px;
+  font-size: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+.suggestions {
+  width: 80%;
+  padding: 8px;
+  border: solid 1.5px #a7a6a6;
+  background-color: rgb(77, 76, 76);
+  color: white;
+  cursor: pointer;
+  font-size: 12px;
+  text-align: left;
+  margin-top: 2px;
+}
+.main_name {
+  font-weight: bold;
+  font-size: 13px;
+}
+.info {
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.placeInfo {
+  margin-top: 28px;
+  padding-left: 10px;
+  line-height: 1.5;
+}
+h1 {
+  font-size: 25px;
+}
+.weather_components {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+}
+.weather-box {
+  width: 160px;
+  text-align: left;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 10px;
+  line-height: 2;
+  box-shadow: 5px 5px 5px rgb(129, 128, 128) inset,
+    -5px -5px 5px rgb(139, 139, 139) inset;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.main {
+  font-size: 25px;
+  font-weight: bold;
+}
+.small {
+  font-size: 12px;
+}
+.med {
+  font-size: 18px;
+}
+.bold {
+  font-weight: bold;
 }
